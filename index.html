@@ -861,31 +861,6 @@
             // Mostrar mensagem de confirmação
             alert('Conversa exportada com sucesso! O arquivo foi baixado.');
         }
-
-        // Adicionar algumas mensagens de exemplo se o chat estiver vazio
-        if (messages.length === 0) {
-            // Mensagens iniciais
-            const initialMessages = [
-                {
-                    id: 1,
-                    text: "Olá! Bem-vindo ao chat com armazenamento local. Suas mensagens serão salvas mesmo após fechar o navegador.",
-                    type: 'received',
-                    sender: 'Sistema',
-                    timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-                },
-                {
-                    id: 2,
-                    text: "Use o toggle para alternar entre envio e recebimento, e clique no ícone de emoji para adicionar emojis às mensagens.",
-                    type: 'sent',
-                    sender: participants.operator,
-                    timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-                }
-            ];
-            
-            messages = initialMessages;
-            localStorage.setItem('chatMessages', JSON.stringify(messages));
-            loadMessages();
-        }
     </script>
 </body>
                       </html>
